@@ -1,0 +1,9 @@
+Django==2.2
+opentelemetry-sdk
+opentelemetry-instrumentation-django
+opentelemetry-exporter-otlp
+
+
+opentelemetry-bootstrap --action=install
+
+opentelemetry-instrument python3 manage.py runserver --settings=nsl_vcs.settings.docker 0.0.0.0:7014 --noreload
